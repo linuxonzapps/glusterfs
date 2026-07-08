@@ -25,7 +25,7 @@ cp glusterfs-${version}.tar.gz ../../
 tar -xzvf glusterfs-${version}.tar.gz
 ln -s glusterfs-${version}.tar.gz glusterfs_${version}.orig.tar.gz
 git clone http://github.com/gluster/glusterfs-debian.git
-cd glusterfs-debian/ && git checkout -b $VERSION_CODENAME-${version}-local origin/$VERSION_CODENAME-glusterfs-${version}
+cd glusterfs-debian/ && git checkout -b $VERSION_CODENAME-11-local origin/$VERSION_CODENAME-glusterfs-11
 sed -i "1i glusterfs (${version}-ubuntu1~$VERSION_CODENAME1) $VERSION_CODENAME; urgency=medium\n\n  * GlusterFS ${version} GA\n\n -- GlusterFS GlusterFS deb packages <deb.packages@gluster.org>  `date +"%a, %d %b %Y %T %z"`\n" debian/changelog
 cp -a debian ../glusterfs-${version}/
 cd ../glusterfs-${version}
